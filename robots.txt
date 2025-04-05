@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://ajayshaganti.com/sitemap.xml
+google-site-verification=QEo8R-bQoQ4OE_kBoOX1skAZ-NhJyTZpukFuWJMZfnQ
