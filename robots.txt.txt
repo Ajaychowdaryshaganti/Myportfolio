@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ajayshaganti.com/sitemap.xml
