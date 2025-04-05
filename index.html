@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--Bootstrap ================================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+    <!-- Style Sheet ================================================== -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Google Fonts ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="facebook" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95" />
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 16 16">
+            <path fill="currentColor"
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518a3.3 3.3 0 0 0 1.447-1.817a6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429a3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218a3.2 3.2 0 0 1-.865.115a3 3 0 0 1-.614-.057a3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5" />
+        </symbol>
+        <symbol id="pinterest" viewBox="0 0 24 24">
+            <g fill="none">
+                <path
+                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                <path fill="currentColor"
+                    d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12c0 4.006 2.356 7.462 5.758 9.058l2.29-10.766a1 1 0 0 1 1.956.416C11.73 12 11.49 12.5 11.501 13.1c.017.94.273 1.442.521 1.702c.253.265.618.408 1.095.4c.487-.01 1.038-.181 1.526-.489C15.592 14.117 16 13.095 16 12a4 4 0 1 0-7.668 1.6a1 1 0 0 1-1.832.8a6 6 0 1 1 11 0c-.368.848-1.04 1.534-1.792 2.007c-.755.475-1.657.779-2.555.795c-.819.015-1.672-.212-2.359-.808L9.66 21.726c.75.18 1.534.275 2.339.275Z" />
+            </g>
+        </symbol>
+        <symbol id="youtube" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73" />
+        </symbol>
+        <symbol id="paintbrush" viewBox="0 0 16 16">
+            <path fill="currentColor"
+                d="m5.6 11.6l-1.2-1.2c-.8-.2-2-.1-2.7 1c-.8 1.1-.3 2.8-1.7 4.6c0 0 3.5 0 4.8-1.3c1.2-1.2 1.2-2.2 1-3zm.2-3.5c-.2.3-.5.7-.7 1c0 .2-.1.3-.2.4L6.4 11c.1-.1.3-.2.4-.3c.3-.2.7-.4 1-.7c.4 0 .6-.2.8-.4L6.4 7.4c-.2.2-.4.4-.6.7m10-7.9c-.3-.3-.7-.3-1-.1c0 0-3 2.5-5.9 5.1c-.4.4-.7.7-1.1 1c-.2.2-.4.4-.6.5l2.1 2.1c.2-.2.4-.4.5-.7c.3-.4.6-.7.9-1.1c2.5-3 5.1-5.9 5.1-5.9c.3-.2.3-.6 0-.9" />
+        </symbol>
+        <symbol id="t-shirt" viewBox="0 0 20 20">
+            <g fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="m2.668 10.009l1.166-.583V16.5a2.5 2.5 0 0 0 2.5 2.5h7.335a2.5 2.5 0 0 0 2.5-2.5V9.425l1.166.581a.5.5 0 0 0 .71-.338l.945-4.236a.5.5 0 0 0-.135-.463l-2.248-2.24A2.5 2.5 0 0 0 14.842 2h-2.007a.5.5 0 0 0-.493.415c-.287 1.658-1.04 2.409-2.342 2.409c-1.3 0-2.054-.751-2.34-2.409A.5.5 0 0 0 7.167 2H5.161a2.5 2.5 0 0 0-1.766.73L1.15 4.97a.5.5 0 0 0-.135.462l.943 4.238a.5.5 0 0 0 .711.338M5.161 3h1.598C7.195 4.84 8.297 5.824 10 5.824S12.806 4.84 13.243 3h1.6a1.5 1.5 0 0 1 1.058.437l2.053 2.046l-.745 3.343l-1.317-.656a.5.5 0 0 0-.723.448V16.5a1.5 1.5 0 0 1-1.5 1.5H6.334a1.5 1.5 0 0 1-1.5-1.5V8.618a.5.5 0 0 0-.724-.448l-1.316.658l-.744-3.345l2.051-2.045A1.5 1.5 0 0 1 5.161 3"
+                    clip-rule="evenodd" />
+                <path d="M12 10.5a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1z" />
+            </g>
+        </symbol>
+        <symbol id="box" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.942v.117c0 2.524 0 3.787-.597 4.801c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5l-4 2M12 12L3 7.5m9 4.5v9.5m0-9.5l4.5-2.25l.5-.25m0 0V13m0-3.5l-9.5-5" />
+        </symbol>
+        <symbol id="arrow-left" viewBox="0 0 256 256">
+            <path fill="currentColor"
+                d="M220 128a4 4 0 0 1-4 4H49.66l65.17 65.17a4 4 0 0 1-5.66 5.66l-72-72a4 4 0 0 1 0-5.66l72-72a4 4 0 0 1 5.66 5.66L49.66 124H216a4 4 0 0 1 4 4" />
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 256 256">
+            <path fill="currentColor"
+                d="m218.83 130.83l-72 72a4 4 0 0 1-5.66-5.66L206.34 132H40a4 4 0 0 1 0-8h166.34l-65.17-65.17a4 4 0 0 1 5.66-5.66l72 72a4 4 0 0 1 0 5.66" />
+        </symbol>
+        <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path fill="currentColor"
+                d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="close" viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </symbol>
+        <svg fill="#000000" id="web" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 399.997 399.997" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M281.547,143.478c-0.456-2.581-2.917-4.305-5.501-3.851l-17.05,3.005c-2.047-4.803-4.662-9.302-7.764-13.418 l11.139-13.272c0.809-0.965,1.201-2.211,1.094-3.466c-0.111-1.256-0.715-2.414-1.68-3.225l-14.913-12.514 c-0.964-0.809-2.213-1.202-3.468-1.093c-1.254,0.109-2.413,0.714-3.224,1.678l-11.13,13.265c-4.566-2.326-9.45-4.123-14.57-5.306 V87.969c0-2.624-2.125-4.751-4.748-4.751h-19.466c-2.622,0-4.748,2.127-4.748,4.751v17.312 c-5.122,1.183-10.004,2.979-14.572,5.306l-11.128-13.265c-1.688-2.008-4.682-2.271-6.69-0.584l-14.913,12.513 c-0.966,0.811-1.568,1.969-1.68,3.225c-0.107,1.255,0.284,2.501,1.094,3.466l11.138,13.272 c-3.102,4.116-5.716,8.617-7.763,13.418l-17.05-3.005c-2.579-0.454-5.045,1.27-5.501,3.851l-3.381,19.173 c-0.218,1.24,0.064,2.519,0.788,3.549c0.722,1.032,1.823,1.733,3.064,1.951l17.063,3.011c0.277,5.284,1.197,10.398,2.68,15.268 l-14.994,8.657c-1.092,0.631-1.886,1.665-2.213,2.882c-0.325,1.219-0.154,2.514,0.475,3.604l9.733,16.86 c0.63,1.092,1.667,1.886,2.885,2.212c0.403,0.109,0.816,0.163,1.229,0.163c0.826,0,1.645-0.216,2.373-0.638l15.009-8.664 c3.533,3.776,7.518,7.127,11.868,9.967l-5.926,16.277c-0.43,1.184-0.375,2.489,0.158,3.631c0.533,1.142,1.496,2.022,2.68,2.455 l18.294,6.658c0.524,0.19,1.075,0.286,1.625,0.286c0.686,0,1.371-0.149,2.005-0.444c1.142-0.532,2.025-1.496,2.456-2.681 l5.925-16.278c2.54,0.307,5.127,0.469,7.75,0.469s5.21-0.162,7.75-0.469l5.926,16.278c0.432,1.185,1.313,2.146,2.455,2.681 c0.636,0.295,1.318,0.444,2.007,0.444c0.549,0,1.101-0.097,1.623-0.286l18.295-6.658c1.185-0.433,2.146-1.313,2.681-2.457 c0.532-1.142,0.588-2.445,0.157-3.629l-5.927-16.277c4.352-2.84,8.335-6.188,11.868-9.967l15.009,8.664 c0.729,0.422,1.547,0.637,2.373,0.637c0.412,0,0.826-0.053,1.229-0.162c1.218-0.326,2.253-1.12,2.884-2.212l9.732-16.86 c0.631-1.089,0.802-2.385,0.477-3.604c-0.327-1.217-1.123-2.253-2.213-2.882l-14.994-8.657c1.48-4.87,2.402-9.983,2.68-15.268 l17.063-3.011c1.241-0.218,2.341-0.919,3.062-1.951c0.726-1.031,1.006-2.309,0.788-3.549L281.547,143.478z M200,193.117 c-14.424,0-26.117-11.692-26.117-26.116c0-14.424,11.693-26.116,26.117-26.116s26.117,11.692,26.117,26.116 C226.117,181.425,214.424,193.117,200,193.117z"></path> <path d="M366.684,24.971H33.316C14.945,24.971,0,39.917,0,58.288V275.56c0,18.371,14.945,33.317,33.316,33.317h107.412 l-20.387,44.955c-2.105,4.643-1.709,10.037,1.053,14.321c2.762,4.285,7.51,6.873,12.607,6.873h131.996c0,0,0.014,0,0.02,0 c8.285,0,15-6.715,15-15c0-2.493-0.605-4.848-1.686-6.916l-20.062-44.233h107.412c18.371,0,33.316-14.946,33.316-33.317V58.288 C400,39.917,385.055,24.971,366.684,24.971z M370,275.561c0,1.829-1.488,3.316-3.316,3.316H33.316 c-1.828,0-3.316-1.487-3.316-3.316V58.288c0-1.829,1.488-3.317,3.316-3.317h333.367c1.828,0,3.316,1.488,3.316,3.317L370,275.561 L370,275.561z"></path> </g> </g> </g> </g></svg>
+        <svg fill="#000000" id="cloud" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 399.997 399.997" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M281.547,143.478c-0.456-2.581-2.917-4.305-5.501-3.851l-17.05,3.005c-2.047-4.803-4.662-9.302-7.764-13.418 l11.139-13.272c0.809-0.965,1.201-2.211,1.094-3.466c-0.111-1.256-0.715-2.414-1.68-3.225l-14.913-12.514 c-0.964-0.809-2.213-1.202-3.468-1.093c-1.254,0.109-2.413,0.714-3.224,1.678l-11.13,13.265c-4.566-2.326-9.45-4.123-14.57-5.306 V87.969c0-2.624-2.125-4.751-4.748-4.751h-19.466c-2.622,0-4.748,2.127-4.748,4.751v17.312 c-5.122,1.183-10.004,2.979-14.572,5.306l-11.128-13.265c-1.688-2.008-4.682-2.271-6.69-0.584l-14.913,12.513 c-0.966,0.811-1.568,1.969-1.68,3.225c-0.107,1.255,0.284,2.501,1.094,3.466l11.138,13.272 c-3.102,4.116-5.716,8.617-7.763,13.418l-17.05-3.005c-2.579-0.454-5.045,1.27-5.501,3.851l-3.381,19.173 c-0.218,1.24,0.064,2.519,0.788,3.549c0.722,1.032,1.823,1.733,3.064,1.951l17.063,3.011c0.277,5.284,1.197,10.398,2.68,15.268 l-14.994,8.657c-1.092,0.631-1.886,1.665-2.213,2.882c-0.325,1.219-0.154,2.514,0.475,3.604l9.733,16.86 c0.63,1.092,1.667,1.886,2.885,2.212c0.403,0.109,0.816,0.163,1.229,0.163c0.826,0,1.645-0.216,2.373-0.638l15.009-8.664 c3.533,3.776,7.518,7.127,11.868,9.967l-5.926,16.277c-0.43,1.184-0.375,2.489,0.158,3.631c0.533,1.142,1.496,2.022,2.68,2.455 l18.294,6.658c0.524,0.19,1.075,0.286,1.625,0.286c0.686,0,1.371-0.149,2.005-0.444c1.142-0.532,2.025-1.496,2.456-2.681 l5.925-16.278c2.54,0.307,5.127,0.469,7.75,0.469s5.21-0.162,7.75-0.469l5.926,16.278c0.432,1.185,1.313,2.146,2.455,2.681 c0.636,0.295,1.318,0.444,2.007,0.444c0.549,0,1.101-0.097,1.623-0.286l18.295-6.658c1.185-0.433,2.146-1.313,2.681-2.457 c0.532-1.142,0.588-2.445,0.157-3.629l-5.927-16.277c4.352-2.84,8.335-6.188,11.868-9.967l15.009,8.664 c0.729,0.422,1.547,0.637,2.373,0.637c0.412,0,0.826-0.053,1.229-0.162c1.218-0.326,2.253-1.12,2.884-2.212l9.732-16.86 c0.631-1.089,0.802-2.385,0.477-3.604c-0.327-1.217-1.123-2.253-2.213-2.882l-14.994-8.657c1.48-4.87,2.402-9.983,2.68-15.268 l17.063-3.011c1.241-0.218,2.341-0.919,3.062-1.951c0.726-1.031,1.006-2.309,0.788-3.549L281.547,143.478z M200,193.117 c-14.424,0-26.117-11.692-26.117-26.116c0-14.424,11.693-26.116,26.117-26.116s26.117,11.692,26.117,26.116 C226.117,181.425,214.424,193.117,200,193.117z"></path> <path d="M366.684,24.971H33.316C14.945,24.971,0,39.917,0,58.288V275.56c0,18.371,14.945,33.317,33.316,33.317h107.412 l-20.387,44.955c-2.105,4.643-1.709,10.037,1.053,14.321c2.762,4.285,7.51,6.873,12.607,6.873h131.996c0,0,0.014,0,0.02,0 c8.285,0,15-6.715,15-15c0-2.493-0.605-4.848-1.686-6.916l-20.062-44.233h107.412c18.371,0,33.316-14.946,33.316-33.317V58.288 C400,39.917,385.055,24.971,366.684,24.971z M370,275.561c0,1.829-1.488,3.316-3.316,3.316H33.316 c-1.828,0-3.316-1.487-3.316-3.316V58.288c0-1.829,1.488-3.317,3.316-3.317h333.367c1.828,0,3.316,1.488,3.316,3.317L370,275.561 L370,275.561z"></path> </g> </g> </g> </g></svg><svg fill="#000000" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>ionicons-v5-f</title><path d="M424.44,227.25a16,16,0,0,1-12.12-12.39c-7.68-36.68-24.45-68.15-49.18-92A153.57,153.57,0,0,0,256,80c-35.5,0-68.24,11.69-94.68,33.8a156.24,156.24,0,0,0-42,56,16,16,0,0,1-11.37,9.15c-27,5.62-51.07,17.34-69.18,33.87C13.39,235.88,0,267.42,0,304c0,36,14.38,68.88,40.49,92.59C65.64,419.43,99.56,432,136,432H396c32.37,0,60.23-8.57,80.59-24.77C499.76,388.78,512,361.39,512,328,512,270.43,470,237.42,424.44,227.25Zm-95.2-8.94-107.8,128a16,16,0,0,1-12,5.69h-.27a16,16,0,0,1-11.88-5.28l-45.9-50.87c-5.77-6.39-5.82-16.33.3-22.4a16,16,0,0,1,23.16.63l33.9,37.58,96-114a16,16,0,1,1,24.48,20.62Z"></path></g></svg>
+        <svg viewBox="0 0 24 24" id="bigdata" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.6231 5.93966C7.75276 6.37483 7.5 6.83725 7.5 7.125C7.5 7.41275 7.75276 7.87517 8.6231 8.31034C9.44857 8.72307 10.6414 9 12 9C13.3586 9 14.5514 8.72307 15.3769 8.31034C16.2472 7.87517 16.5 7.41275 16.5 7.125C16.5 6.83725 16.2472 6.37483 15.3769 5.93966C14.5514 5.52693 13.3586 5.25 12 5.25C10.6414 5.25 9.44857 5.52693 8.6231 5.93966ZM16.5 9.39844C16.3535 9.4904 16.2018 9.57494 16.0477 9.65198C14.9731 10.1893 13.5409 10.5 12 10.5C10.4591 10.5 9.02693 10.1893 7.95228 9.65198C7.79821 9.57494 7.64654 9.4904 7.5 9.39844V10.375C7.5 10.7155 7.77767 11.2057 8.63569 11.6552C9.45819 12.086 10.6464 12.375 12 12.375C13.3536 12.375 14.5418 12.086 15.3643 11.6552C16.2223 11.2057 16.5 10.7155 16.5 10.375V9.39844ZM18 7.125V10.375C18 10.417 17.9989 10.4587 17.9966 10.5H18V13.375C18 13.417 17.9989 13.4587 17.9966 13.5H18V16.375C18 17.5532 17.1024 18.4381 16.0603 18.9839C14.9827 19.5484 13.5459 19.875 12 19.875C10.4541 19.875 9.01731 19.5484 7.93968 18.9839C6.89758 18.4381 6 17.5532 6 16.375V13.5H6.00339C6.00114 13.4587 6 13.417 6 13.375V10.5H6.00339C6.00114 10.4587 6 10.417 6 10.375V7.125C6 5.96301 6.92249 5.11292 7.95228 4.59802C9.02693 4.0607 10.4591 3.75 12 3.75C13.5409 3.75 14.9731 4.0607 16.0477 4.59802C17.0775 5.11292 18 5.96301 18 7.125ZM7.5 15.7267V16.375C7.5 16.7155 7.77767 17.2057 8.63569 17.6552C9.45819 18.086 10.6464 18.375 12 18.375C13.3536 18.375 14.5418 18.086 15.3643 17.6552C16.2223 17.2057 16.5 16.7155 16.5 16.375V15.7267C16.358 15.8194 16.2106 15.9052 16.0603 15.9839C14.9827 16.5484 13.5459 16.875 12 16.875C10.4541 16.875 9.01731 16.5484 7.93968 15.9839C7.78936 15.9052 7.64205 15.8194 7.5 15.7267ZM16.0603 12.9839C16.2106 12.9052 16.358 12.8194 16.5 12.7267V13.375C16.5 13.7155 16.2223 14.2057 15.3643 14.6552C14.5418 15.086 13.3536 15.375 12 15.375C10.6464 15.375 9.45819 15.086 8.63569 14.6552C7.77767 14.2057 7.5 13.7155 7.5 13.375V12.7267C7.64205 12.8194 7.78936 12.9052 7.93968 12.9839C9.01731 13.5484 10.4541 13.875 12 13.875C13.5459 13.875 14.9827 13.5484 16.0603 12.9839Z" fill="#080341"></path> </g></svg>
+        <svg viewBox="0 0 1024 1024" id="probs" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M349.92 427.474c-24.466 0-48.942-9.314-67.57-27.942-18.096-18.08-28.058-42.086-28.058-67.584 0-25.498 9.96-49.496 28.058-67.57a95.214 95.214 0 0 1 24.186-17.628c3.934-1.984 8.75-0.446 10.758 3.482a8 8 0 0 1-3.482 10.758 79.3 79.3 0 0 0-20.15 14.684c-15.084 15.068-23.382 35.054-23.382 56.274 0 21.226 8.298 41.212 23.374 56.28 31.024 31.026 81.504 31.026 112.528 0a7.988 7.988 0 0 1 11.304 0 7.988 7.988 0 0 1 0 11.304c-18.624 18.628-43.098 27.942-67.566 27.942zM761.528 404.452a7.994 7.994 0 0 1-7.198-11.476c5.246-10.844 7.916-22.522 7.916-34.726 0-43.882-35.694-79.584-79.568-79.584a7.99 7.99 0 0 1-7.994-7.994 7.99 7.99 0 0 1 7.994-7.994c52.698 0 95.558 42.876 95.558 95.572 0 14.638-3.204 28.668-9.51 41.69a7.998 7.998 0 0 1-7.198 4.512z" fill=""></path><path d="M731.954 293.782a8.004 8.004 0 0 1-7.698-10.18 79.114 79.114 0 0 0 2.982-21.704c0-41.704-31.29-75.796-72.776-79.302a7.984 7.984 0 0 1-7.292-8.634c0.376-4.404 4.42-7.652 8.634-7.292 49.84 4.2 87.422 45.14 87.422 95.228 0 8.932-1.202 17.7-3.574 26.076a8.016 8.016 0 0 1-7.698 5.808zM437.492 462.55c-34.046 0-65.938-13.28-89.81-37.394a7.99 7.99 0 0 1 0.062-11.304 7.99 7.99 0 0 1 11.304 0.062c20.844 21.054 48.7 32.648 78.444 32.648 15.676 0 63.384 0 83.512-15.792a7.966 7.966 0 0 1 11.232 1.35 7.988 7.988 0 0 1-1.358 11.218c-21.938 17.222-63.806 19.212-93.386 19.212z" fill=""></path><path d="M665.19 230.482a7.988 7.988 0 0 1-7.994-7.994c0-60.77-49.45-110.204-110.234-110.204-60.786 0-110.236 49.434-110.236 110.204a7.99 7.99 0 0 1-7.994 7.994 7.99 7.99 0 0 1-7.994-7.994c0-69.584 56.616-126.192 126.224-126.192 69.606 0 126.222 56.608 126.222 126.192a7.99 7.99 0 0 1-7.994 7.994zM612.632 497.588c-40.268 0-77.148-18.47-101.21-50.674a7.99 7.99 0 0 1 1.616-11.188 8 8 0 0 1 11.196 1.616c21.008 28.128 53.236 44.258 88.398 44.258 17.222 0 33.71-3.84 49.012-11.414 3.902-1.944 8.76-0.352 10.71 3.624a7.99 7.99 0 0 1-3.622 10.71c-17.518 8.674-36.394 13.068-56.1 13.068z" fill=""></path><path d="M319.13 322.448a7.988 7.988 0 0 1-7.346-4.824c-6.87-15.886-10.352-32.796-10.352-50.262 0-69.59 56.616-126.206 126.206-126.206 8.75 0 17.566 0.914 26.192 2.716a7.986 7.986 0 0 1 6.192 9.454c-0.898 4.31-5.168 7.104-9.456 6.192a112.382 112.382 0 0 0-22.928-2.374c-60.776 0-110.218 49.44-110.218 110.216 0 15.272 3.044 30.042 9.04 43.922a7.996 7.996 0 0 1-7.33 11.166zM817.486 418.894a7.99 7.99 0 0 1-6.384-12.794c10.398-13.874 15.91-30.416 15.91-47.85 0-35.052-22.406-65.578-55.742-75.96a7.998 7.998 0 0 1 4.746-15.27c40.066 12.476 66.984 49.136 66.984 91.232 0 20.916-6.606 40.784-19.126 57.452a7.972 7.972 0 0 1-6.388 3.19z" fill=""></path><path d="M796.72 293.782a7.994 7.994 0 0 1-7.696-10.148 80.914 80.914 0 0 0 2.95-21.736c0-35.022-22.376-65.546-55.662-75.954a7.99 7.99 0 0 1-5.246-10.008c1.326-4.216 5.744-6.606 10.024-5.246 40.002 12.498 66.874 49.152 66.874 91.208 0 8.876-1.186 17.644-3.542 26.044a8.008 8.008 0 0 1-7.702 5.84zM738.964 562.854c-47.264 0-70.622-41.33-70.918-41.852a7.984 7.984 0 0 1 3.152-10.836 8.02 8.02 0 0 1 10.852 3.116c1.172 2.124 29.668 51.648 89.406 26.324 42.39-17.964 28.012-61.816 27.372-63.674a7.99 7.99 0 0 1 4.996-10.14 7.984 7.984 0 0 1 10.148 4.988c7.012 20.602 8.462 64.58-36.27 83.564-14.332 6.058-27.244 8.51-38.738 8.51zM751.862 687.876c-0.438 0-0.86-0.032-1.294-0.094a8 8 0 0 1-6.606-9.182c10.196-62.956 0.454-91.67 0.36-91.95-1.454-4.138 0.704-8.728 4.84-10.198 4.168-1.466 8.698 0.624 10.196 4.748 0.468 1.28 11.368 32.226 0.376 99.958a7.978 7.978 0 0 1-7.872 6.718zM783.822 687.876a8.01 8.01 0 0 1-7.806-9.73c15.162-68.216 0.532-106.862 0.376-107.252a7.998 7.998 0 0 1 4.496-10.352c4.076-1.638 8.712 0.36 10.354 4.45 0.702 1.718 16.72 43.112 0.388 116.622a8 8 0 0 1-7.808 6.262z" fill=""></path><path d="M787.352 544.352c-20.016 0-29.9-15.864-32.446-25.076a8 8 0 0 1 5.59-9.828 7.98 7.98 0 0 1 9.82 5.528c0.766 2.624 5.402 15.48 20.784 13.108 4.34-0.546 8.448 2.342 9.086 6.714a7.978 7.978 0 0 1-6.712 9.086 40.646 40.646 0 0 1-6.122 0.468zM760.106 559.964c-0.516 0-1.016-0.046-1.532-0.14-31.852-6.134-38.47-30.914-38.736-31.96a7.984 7.984 0 0 1 5.778-9.718c4.308-1.04 8.588 1.49 9.696 5.708 0.218 0.772 4.808 16.128 26.294 20.266 4.34 0.828 7.166 5.028 6.338 9.37a7.992 7.992 0 0 1-7.838 6.474zM384.092 671.886a7.954 7.954 0 0 1-5.464-2.156 8 8 0 0 1-1.038-10.492l70.91-99.274h-48.42a7.976 7.976 0 0 1-7.386-4.934 7.976 7.976 0 0 1 1.734-8.71l63.954-63.956c3.124-3.124 8.182-3.124 11.304 0s3.124 8.182 0 11.304l-50.308 50.306h44.656a7.998 7.998 0 0 1 6.504 12.648l-45.054 63.078 112.108-91.714h-41.58a8 8 0 0 1-7.37-4.894 8 8 0 0 1 1.656-8.69l31.986-32.726c3.076-3.146 8.158-3.208 11.312-0.124s3.216 8.142 0.124 11.304L515.008 512h44.974a7.998 7.998 0 0 1 5.06 14.184l-175.89 143.888a7.92 7.92 0 0 1-5.06 1.814z" fill=""></path><path d="M714.53 498.956c-21.346 0-41.252-7.48-53.432-14.732a7.992 7.992 0 0 1 8.166-13.74c2.388 1.398 59.1 34.172 94.948-11.936 26.78-34.414-1.358-84.276-1.638-84.776a8 8 0 0 1 2.92-10.914 7.98 7.98 0 0 1 10.914 2.912c1.406 2.412 33.852 59.628 0.422 102.598-17.896 23.006-40.816 30.588-62.3 30.588z" fill=""></path><path d="M815.8 1023.634H368.102a7.99 7.99 0 0 1-7.994-7.994v-102.832c-126.666 15.786-197.328 6.12-224.2-31.182-20.258-28.106-12.436-67.31-1.014-102.912l-16.464-12.522a8.01 8.01 0 0 1-2.436-9.65l8.306-18.424-14.162-14.1a7.992 7.992 0 0 1-2.264-6.806l11.664-80.74-58.794-29.384a7.954 7.954 0 0 1-4.06-4.778 7.964 7.964 0 0 1 0.648-6.246l103.942-187.302c-22.484-100.29-3.576-192.004 54.758-265.42C286.106 55.146 411.362 0.366 542.918 0.366c72.276 0 142.258 16.356 202.372 47.31 117.104 60.284 188.8 141.304 213.098 240.796 41.484 169.902-66.61 347.174-115.012 415.5-64.018 90.358-20.19 307.858-19.752 310.042a8.042 8.042 0 0 1-1.624 6.684 8 8 0 0 1-6.2 2.936z m-439.704-15.988h430.038c-8.104-44.468-36.6-227.12 24.186-312.918 47.138-66.53 152.47-238.954 112.53-402.462-23.14-94.792-92.074-172.308-204.87-230.382-57.88-29.784-125.332-45.53-195.062-45.53-126.794 0-247.254 52.47-314.372 136.934-55.772 70.192-73.408 158.324-51.01 254.872a8.006 8.006 0 0 1-0.804 5.684l-101.374 182.674 56.492 28.246a7.98 7.98 0 0 1 4.332 8.292l-11.914 82.458 15.24 15.176a7.994 7.994 0 0 1 1.638 8.962l-7.97 17.674 15.934 12.118a8.014 8.014 0 0 1 2.732 8.898c-15.66 47-16.55 75.088-2.966 93.934 23.272 32.29 93.886 39.878 218.18 23.516a7.92 7.92 0 0 1 6.314 1.92 7.968 7.968 0 0 1 2.724 6.012v103.922z" fill=""></path></g></svg>
+    </svg>
+
+    <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
+
+    
+
+
+    <nav id="header-nav" class="navbar navbar-expand-lg container-fluid bg-white bg-opacity-50 py-4 fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-size: 30px; font-weight: bold; text-decoration: none;">
+                <span style="color: black;">Ajay</span>
+                <span style="color: #E03137;">Shaganti</span>
+            </a>
+            
+
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav text-center align-items-center justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active pe-lg-5" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pe-lg-5" href="#hire" role="button"
+                                aria-expanded="false"> Skills</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pe-lg-5" href="#offer" role="button"
+                                aria-expanded="false"> Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="#" role="button" onclick="showUnderConstruction()">Portfolio</a>
+                        </li>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="underConstructionModal" tabindex="-1" aria-labelledby="underConstructionModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="underConstructionModalLabel">I'm Building Something Amazing!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                My Portfolio is under construction. Stay tuned for something amazing coming your way soon!
+                                <div class="progress mt-3">
+                                  <div id="progressBar" class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <script>
+                          function showUnderConstruction() {
+                            // Show modal with under construction message
+                            var myModal = new bootstrap.Modal(document.getElementById('underConstructionModal'));
+                            myModal.show();
+                            
+                            // Disable background interactions by adding 'modal-backdrop' class
+                            //document.body.style.overflow = 'hidden'; // Prevent scrolling on the background
+                            
+                            // Progress bar animation and auto close (progress bar going backwards)
+                            var progressBar = document.getElementById('progressBar');
+                            var width = 100;  // Start from 100%
+                        
+                            var interval = setInterval(function() {
+                              if (width <= 0) {
+                                clearInterval(interval);
+                                myModal.hide(); // Automatically close the modal when progress is 0%
+                                document.body.style.overflow = ''; // Enable background scrolling again
+                              } else {
+                                width--;
+                                progressBar.style.width = width + '%';
+                                progressBar.setAttribute('aria-valuenow', width);
+                              }
+                            }, 20); // Updates progress every 100ms for smooth animation
+                          }
+                        </script>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pe-lg-5 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false"> Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog.html" class="dropdown-item">Blog <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="single-post.html" class="dropdown-item">Single-Post
+                                        <span class="badge bg-dark">Pro</span></a>
+                                </li>
+                                <li><a href="services.html" class="dropdown-item">Services <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="service-details.html" class="dropdown-item">Services-Details
+                                        <span class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="portfolio.html" class="dropdown-item">Portfolio <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="portfolio-details.html" class="dropdown-item">Portfolio-Details
+                                        <span class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="contact.html" class="dropdown-item">Contact <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="faqs.html" class="dropdown-item">FAQs <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="team.html" class="dropdown-item">Team <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5 text-decoration-underline fw-bold"
+                                href="https://templatesjungle.gumroad.com/l/daniel-free-portfolio-html-bootstrap-website-template"
+                                target="_blank" class="text-decoration-underline fw-bold" href="#">Get PRO</a>
+                        </li>
+
+                        <li class="nav-item search-item mt-2 mt-lg-0 ">
+                            <a href="#" class="search-button">
+                                <svg class="search">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="hero" class="padding-large jarallax">
+        <div class="container" data-aos="fade-up">
+            <div class="row text-start">
+                <div class="col-lg-5">
+                    <p>
+                        Software Developer
+                    </p>
+                    <h2 class="display-1 fw-bold">
+                        Hello I'm <br><span class="text-primary">Ajay Shaganti</span>
+                    </h2>
+                    <p style="text-align: justify;">
+                        Detail-oriented IT professional with a Master’s in Information Technology, specializing in web development, cloud computing, and data engineering. Passionate about designing secure, scalable, and high-performance applications that enhance efficiency and drive business growth. Experienced in optimizing big data workflows, implementing cloud-based architectures, and developing intuitive user interfaces. Adept at solving complex technical challenges with a results-driven approach, continuously adapting to emerging technologies to deliver innovative solutions.
+                    </p>
+                    
+                    <a href="#" class="btn btn-outline-dark rounded-pill mt-4">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+        <img src="images/hero-img.png" alt="banner" class="jarallax-img">
+    </section>
+
+    <section id="hire">
+        <div class="container padding-medium">
+            <div class="row flex-row-reverse">
+                <div class="offset-lg-1 col-lg-6" data-aos="fade-left">
+                    <h3 class="display-5 fw-bold">
+                        My Skills
+                    </h3>
+                    <div id="progressbar-tooltip-id" class="progressbar-tooltip pt-4">
+    
+                        <h6>Web Development</h6>
+                        <div class="ab-progress progress-tooltip" data-progress data-tooltip="true" data-value="85"
+                            data-title=""></div>
+                        <h6>Cloud Technologies</h6>
+                        <div class="ab-progress progress-tooltip" data-progress data-tooltip="true" data-value="80"
+                            data-title=""></div>
+                        <h6>Big Data</h6>
+                        <div class="ab-progress progress-tooltip" data-progress data-tooltip="true" data-value="90"
+                            data-title=""></div>
+                        <h6>Problem Solving & Algorithms</h6>
+                        <div class="ab-progress progress-tooltip" data-progress data-tooltip="true" data-value="88"
+                            data-title=""></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-right">
+                    <h3 class="display-5 fw-bold">
+                        Why Hire Me ?
+                    </h3>
+                    <p class="pt-4" style="text-align: justify;">
+                        With experience in web development, cloud technologies, and big data solutions, I specialize in designing scalable, robust systems that can handle vast datasets. I have a solid understanding of cloud platforms, enabling me to deploy and manage applications efficiently. My background in problem-solving, algorithms, and mentoring students makes me adept at tackling technical challenges and delivering solutions that meet business needs.
+                    </p>
+                    <p style="text-align: justify;">
+                        I have also been actively involved in creating applications for businesses, such as developing booking apps for salons and building a recipe showcase application. My leadership experience as the president of a technical club and my time spent working on optimizing data workflows have further honed my skills in collaboration and cross-functional communication.
+                    </p>
+                    <div class="text-start mt-5">
+                        <a href="#" class="btn btn-dark me-4">
+                            Hire Me
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                            Download CV
+                        </a>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="offer" class="position-relative padding-medium" data-aos="fade-up">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 text-center">
+                    <h3 class="display-5 fw-bold">
+                        What I Offer
+                    </h3>
+                    <p class="mb-5">
+                        I provide a range of services aimed at delivering quality solutions tailored to your business needs. With expertise in web development, big data, cloud technologies, and problem-solving, I aim to help businesses grow through innovation and optimized solutions.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="swiper offer-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Web Development -->
+                    <div class="swiper-slide text-center">
+                        <a href="service-details.html">
+                            <div class="offer-item border mb-4 p-5">
+                                <div class="product-item position-relative">
+                                    <svg class="offer-svg web" width="80" height="80">
+                                        <use xlink:href="#web"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="mt-4">
+                                    Web Development
+                                </h4>
+                                <p>
+                                    I design and develop custom web applications that are scalable, user-friendly, and optimized for performance. From e-commerce to business management tools, I bring your digital presence to life.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Cloud Technologies -->
+                    <div class="swiper-slide text-center">
+                        <a href="service-details.html">
+                            <div class="offer-item border mb-4 p-5">
+                                <div class="product-item position-relative">
+                                    <svg class="offer-svg cloud" width="80" height="80">
+                                        <use xlink:href="#cloud"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="mt-4">
+                                    Cloud Solutions
+                                </h4>
+                                <p>
+                                    I offer cloud solutions that help businesses scale efficiently. With expertise in AWS and Azure, I can assist with infrastructure setup, migration, and management to ensure seamless operations.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Big Data Solutions -->
+                    <div class="swiper-slide text-center">
+                        <a href="service-details.html">
+                            <div class="offer-item border mb-4 p-5">
+                                <div class="product-item position-relative">
+                                    <svg class="offer-svg bigdata" width="80" height="80">
+                                        <use xlink:href="#bigdata"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="mt-4">
+                                    Big Data Solutions
+                                </h4>
+                                <p>
+                                    I specialize in building big data solutions with tools like Apache Hive and Apache Spark, enabling businesses to handle vast datasets and derive actionable insights to drive growth.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <!-- Problem Solving & Algorithm Design -->
+                    <div class="swiper-slide text-center">
+                        <a href="service-details.html">
+                            <div class="offer-item border mb-4 p-5">
+                                <div class="product-item position-relative">
+                                    <svg class="offer-svg probs" width="80" height="80">
+                                        <use xlink:href="#probs"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="mt-4">
+                                    Problem Solving & Algorithms
+                                </h4>
+                                <p>
+                                    With a strong background in problem-solving and algorithm design, I can help optimize processes and solve complex challenges, ensuring efficient and reliable solutions for any technical need.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination position-static mt-4 d-lg-none d-block"></div>
+            </div>
+    
+            <!-- Slider Navigation -->
+            <div class="position-absolute top-50 end-0 translate-middle-y me-5 mt-5 pt-5 main-slider-button-next d-lg-block d-none">
+                <svg class="arrow" width="80" height="80">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </div>
+            <div class="position-absolute top-50 start-0 translate-middle-y ms-5 mt-5 pt-5 main-slider-button-prev d-lg-block d-none">
+                <svg class="arrow" width="80" height="80">
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- <section id="portfolio" class="padding-medium container-fluid pt-0" data-aos="fade-up">
+        <div class="text-center">
+            <h3 class="display-5 fw-bold">
+                Portfolio
+            </h3>
+            <div class="my-5">
+                <p>
+                    <button class="filter-button px-3 mb-3 active" data-filter="*">
+                        All
+                    </button>
+                    <button class="filter-button px-3 mb-3" data-filter=".branding">
+                        Branding
+                    </button>
+                    <button class="filter-button px-3 mb-3" data-filter=".tshirt">
+                        T-shirt
+                    </button>
+                    <button class="filter-button px-3 mb-3" data-filter=".package">
+                        Package
+                    </button>
+                    <button class="filter-button px-3 mb-3" data-filter=".poster">
+                        Poster
+                    </button>
+                </p>
+            </div>
+        </div>
+        <div class="isotope-container row">
+            <div class="item tshirt col-md-4 p-3">
+                <div class="project-content position-relative bg-black">
+                    <img class="project-img img-fluid" src="images/portfolio1.jpg" alt="img">
+                    <div class="project-description p-5 position-absolute bottom-0 start-0">
+                        <h4 class="text-white">ultra jot Coffee</h4>
+                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item branding col-md-4 p-3">
+                <div class="project-content position-relative bg-black">
+                    <img class="project-img img-fluid" src="images/portfolio2.jpg" alt="img">
+                    <div class="project-description p-5 position-absolute bottom-0 start-0">
+                        <h4 class="text-white">ultra jot Coffee</h4>
+                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item tshirt col-md-4 p-3">
+                <div class="project-content position-relative bg-black">
+                    <img class="project-img img-fluid" src="images/portfolio4.jpg" alt="img">
+                    <div class="project-description p-5 position-absolute bottom-0 start-0">
+                        <h4 class="text-white">ultra jot Coffee</h4>
+                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item branding col-md-4 p-3">
+                <div class="project-content position-relative bg-black">
+                    <img class="project-img img-fluid" src="images/portfolio3.jpg" alt="img">
+                    <div class="project-description p-5 position-absolute bottom-0 start-0">
+                        <h4 class="text-white">ultra jot Coffee</h4>
+                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item package col-md-4 p-3">
+                <div class="project-content position-relative bg-black">
+                    <img class="project-img img-fluid" src="images/portfolio5.jpg" alt="img">
+                    <div class="project-description p-5 position-absolute bottom-0 start-0">
+                        <h4 class="text-white">ultra jot Coffee</h4>
+                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item poster col-md-4 p-3">
+                <div class="project-content position-relative bg-black">
+                    <img class="project-img img-fluid" src="images/portfolio6.jpg" alt="img">
+                    <div class="project-description p-5 position-absolute bottom-0 start-0">
+                        <h4 class="text-white">ultra jot Coffee</h4>
+                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-dark me-4">
+                View Portfolios
+            </a>
+        </div>
+    </section> -->
+
+    <section id="experience" class="bg-light py-5">
+        <div class="container" data-aos="fade-up">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center">
+                    <h3 class="display-5 fw-bold">Professional Experience</h3>
+                    <p class="lead">Here's a roadmap of my journey with some of the great companies I've worked with, creating impactful solutions and learning along the way.</p>
+                </div>
+            </div>
+    
+            <!-- Timeline/Roadmap -->
+            <div class="timeline-container">
+                <!-- CBI Electric -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content left">
+                        <div class="timeline-card">
+                            <!-- <div class="timeline-logo">
+                                <img src="images/cbi-electric-logo.png" alt="CBI Electric" class="img-fluid">
+                            </div> -->
+                            <h4 class="fw-bold">Web Application Developer (Freelance)</h4>
+                            <p class="timeline-period">CBI Electric, Melbourne | 2023 – 2024</p>
+                            <div class="skills-container">
+                                <span class="skill-badge">HTML/CSS</span>
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">PHP</span>
+                                <span class="skill-badge">AWS</span>
+                            </div>
+                            <div class="key-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-icon">🔒</span>
+                                    <span class="achievement-text">Secure Login System</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">📊</span>
+                                    <span class="achievement-text">Stock Automation (90% reduction)</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">⚙️</span>
+                                    <span class="achievement-text">Production Scheduling Module</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- TCS -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content right">
+                        <div class="timeline-card">
+                            <!-- <div class="timeline-logo">
+                                <img src="images/tcs-logo.png" alt="TCS" class="img-fluid">
+                            </div> -->
+                            <h4 class="fw-bold">System Engineer</h4>
+                            <p class="timeline-period">Tata Consultancy Services, Hyderabad | 2021 – 2022</p>
+                            <div class="skills-container">
+                                <span class="skill-badge">Hadoop</span>
+                                <span class="skill-badge">Hive</span>
+                                <span class="skill-badge">PySpark</span>
+                            </div>
+                            <div class="key-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-icon">📈</span>
+                                    <span class="achievement-text">Big Data Solutions</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">🔍</span>
+                                    <span class="achievement-text">KRI Monitoring</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">🔄</span>
+                                    <span class="achievement-text">CI/CD Pipeline Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Suntek Corp -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content left">
+                        <div class="timeline-card">
+                            <!-- <div class="timeline-logo">
+                                <img src="images/suntek-logo.png" alt="Suntek Corp" class="img-fluid">
+                            </div> -->
+                            <h4 class="fw-bold">Technical Mentor Intern</h4>
+                            <p class="timeline-period">Suntek Corp, Hyderabad | 2020 – 2021</p>
+                            <div class="skills-container">
+                                <span class="skill-badge">C</span>
+                                <span class="skill-badge">Java</span>
+                                <span class="skill-badge">Problem-Solving</span>
+                            </div>
+                            <div class="key-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-icon">👨‍🏫</span>
+                                    <span class="achievement-text">Mentored 50+ Students</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">🧠</span>
+                                    <span class="achievement-text">Critical Thinking Development</span>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-icon">💬</span>
+                                    <span class="achievement-text">One-on-One Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    
+
+    <!-- <section id="testimonial" class="margin-medium mb-0 position-relative">
+        <div class="position-absolute top-50 start-0 translate-middle-y">
+            <img src="images/pattern.png" alt="pattern" class="img-fluid">
+        </div>
+
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-7 position-relative padding-medium">
+                    <div class="position-absolute top-0 start-0">
+                        <img src="images/quote.png" alt="pattern" class="img-fluid">
+                    </div>
+                    <div class="swiper testimonial-swiper" data-aos="fade-up">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide text-start">
+                                <div class="testimonial-details">
+                                    <p class="fs-2 text-dark lh-base fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapibus eu placerat at
+                                        nisl posuere aliquet amet pharetra malesuada. Suspendisse nisl ac at tortor.
+                                    </p>
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <img src="images/commentor1.jpg" alt="img" class="img-fluid">
+                                        <div class="ms-2">
+                                            <h6 class="m-0">Emma Brown</h6>
+                                            <p class="m-0">CEO - Squirrel Sweets</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide text-start">
+                                <div class="testimonial-details">
+                                    <p class="fs-2 text-dark lh-base fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapibus eu placerat at
+                                        nisl posuere aliquet amet pharetra malesuada. Suspendisse nisl ac at tortor.
+                                    </p>
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <img src="images/commentor1.jpg" alt="img" class="img-fluid">
+                                        <div class="ms-2">
+                                            <h6 class="m-0">Emma Brown</h6>
+                                            <p class="m-0">CEO - Squirrel Sweets</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide text-start">
+                                <div class="testimonial-details">
+                                    <p class="fs-2 text-dark lh-base fst-italic">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapibus eu placerat at
+                                        nisl posuere aliquet amet pharetra malesuada. Suspendisse nisl ac at tortor.
+                                    </p>
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <img src="images/commentor1.jpg" alt="img" class="img-fluid">
+                                        <div class="ms-2">
+                                            <h6 class="m-0">Emma Brown</h6>
+                                            <p class="m-0">CEO - Squirrel Sweets</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination position-static mt-4 text-start"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!-- <section id="achievements" class="padding-medium bg-light">
+        <div class="process-content container" data-aos="fade-up">
+            <div class="row justify-content-center text-center text-md-start g-4">
+                <div class="col-lg-3 col-6 text-center">
+                    <h4 class="display-1 fw-bold text-black-50">3+</h4>
+                    <p class="fw-bold text-dark mb-0">Years of Industry Experience</p>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h4 class="display-1 fw-bold text-black-50">2+</h4>
+                    <p class="fw-bold text-dark mb-0">Products Developed</p>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h4 class="display-1 fw-bold text-black-50">4+</h4>
+                    <p class="fw-bold text-dark mb-0">Academic Projects</p>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h4 class="display-1 fw-bold text-black-50">2+</h4>
+                    <p class="fw-bold text-dark mb-0">Happy Clients</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact">
+        <div class="container padding-medium" data-aos="fade-up">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h3 class="display-1 fw-bold">
+                        Let’s work together
+                    </h3>
+                    <p>
+                        I’m available for freelance work. Have any projects in your mind? <br>
+                        Just feel free to contact me
+                    </p>
+                </div>
+            </div>
+
+            <ul class="d-flex gap-5 list-unstyled justify-content-center my-3">
+                <li>
+                    <a class="nav-link p-0" href="https://www.facebook.com/KannaChowdary.Shaganti">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link p-0" href="https://www.instagram.com/ajay_shaganti/">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a class="nav-link p-0" href="https://www.linkedin.com/in/ajay-shaganti-865256166/" target="_blank">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="nav-link p-0" href="#">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#pinterest"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link p-0" href="#">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#youtube"></use>
+                        </svg>
+                    </a>
+                </li> -->
+            </ul>
+
+            <div class="text-center mt-5">
+                <a href="mailto:ajaychowdaryshaganti@gmail.com" class="btn btn-outline-dark rounded-pill me-4">
+                    Send Email
+                </a>
+                <a href="https://www.linkedin.com/in/ajay-shaganti-865256166/" class="btn btn-outline-primary rounded-pill">
+                    LinkedIn
+                </a>
+            </div>
+            
+        </div>
+        <footer class="border-top border-dark-subtle py-4">
+            <div class="container d-md-flex justify-content-center align-items-center mt-3">
+                <p class="mb-0">© 2025 AjayShaganti. All rights reserved.</p>
+            </div>
+            <p class="credits" >Inspired from: <a href="TemplatesJungle.com">TemplatesJungle</a></p>
+        </footer>
+    </section>
+
+
+    <!-- script ================================================== -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstarp script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--iconify script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
