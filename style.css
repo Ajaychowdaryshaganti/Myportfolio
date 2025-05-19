@@ -535,7 +535,12 @@ a.nav-link:hover {
     border-bottom: #2D2D2D;
   }
 }
-
+	.card-img-top {
+    max-width: 200px; /* Adjust this value as needed */
+    height: auto;
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure margin auto works correctly */
+}
 
 /*---- hero section style start ----*/
 div#progressbar-tooltip-id {
@@ -677,10 +682,46 @@ a.blog-link:hover {
   transition: transform 0.3s ease-out;
 }
 
+.custom-red {
+  color: #e63946;
+}
+.custom-black {
+  color: #212529;
+}
+.icon-heading {
+  display: flex;
+  align-items: center; /* vertically center */
+  gap: 10px; /* space between icon and text */
+}
+
 .image-zoom:hover img {
   transform: scale(1.1);
 }
+.jarallax-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Or your preferred max width */
+    clip-path: inset(0 0 0 0); /* Initial clip-path (no clipping) */
+    transition: clip-path 0.3s ease;
+}
 
+@media (max-width: 992px) {
+    .jarallax-img {
+        clip-path: inset(0 20% 0 0); /* Clip 20% from the right */
+    }
+}
+
+@media (max-width: 768px) {
+    .jarallax-img {
+        clip-path: inset(0 40% 0 0); /* Clip 40% from the right */
+    }
+}
+
+@media (max-width: 576px) {
+    .jarallax-img {
+        clip-path: inset(0 60% 0 0); /* Clip 60% from the right */
+    }
+}
 
 
     /* Timeline/Roadmap Styling */

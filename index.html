@@ -35,6 +35,7 @@
 
     <!-- Google Fonts ================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
@@ -139,61 +140,15 @@
                                 aria-expanded="false"> Skills</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link pe-lg-5" href="#offer" role="button"
+                            <a class="nav-link pe-lg-5" href="#services" role="button"
                                 aria-expanded="false"> Services</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="#portfolio" role="button" >Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link pe-lg-5" href="#experience" role="button" >Experience</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link pe-lg-5" href="#" role="button" onclick="showUnderConstruction()">Portfolio</a>
-                        </li>
-                       
-                        <!-- Modal -->
-                        <div class="modal fade" id="underConstructionModal" tabindex="-1" aria-labelledby="underConstructionModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="underConstructionModalLabel">I'm Building Something Amazing!</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                My Portfolio is under construction. Stay tuned for something amazing coming your way soon!
-                                <div class="progress mt-3">
-                                  <div id="progressBar" class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <script>
-                          function showUnderConstruction() {
-                            // Show modal with under construction message
-                            var myModal = new bootstrap.Modal(document.getElementById('underConstructionModal'));
-                            myModal.show();
-                            
-                            // Disable background interactions by adding 'modal-backdrop' class
-                            //document.body.style.overflow = 'hidden'; // Prevent scrolling on the background
-                            
-                            // Progress bar animation and auto close (progress bar going backwards)
-                            var progressBar = document.getElementById('progressBar');
-                            var width = 100;  // Start from 100%
-                        
-                            var interval = setInterval(function() {
-                              if (width <= 0) {
-                                clearInterval(interval);
-                                myModal.hide(); // Automatically close the modal when progress is 0%
-                                document.body.style.overflow = ''; // Enable background scrolling again
-                              } else {
-                                width--;
-                                progressBar.style.width = width + '%';
-                                progressBar.setAttribute('aria-valuenow', width);
-                              }
-                            }, 20); // Updates progress every 100ms for smooth animation
-                          }
-                        </script>
-                    
                         <li class="nav-item">
                             <a class="nav-link pe-lg-5" href="#contact">Contact</a>
                         </li>
@@ -209,13 +164,15 @@
             <div class="row text-start">
                 <div class="col-lg-5">
                     <p>
-                        Software Developer
+                        Software Engineer
                     </p>
                     <h2 class="display-1 fw-bold">
                         Hello I'm <br><span class="text-primary">Ajay Shaganti</span>
                     </h2>
                     <p style="text-align: justify;">
-                        Detail-oriented IT professional with a Master’s in Information Technology, specializing in web development, cloud computing, and data engineering. Passionate about designing secure, scalable, and high-performance applications that enhance efficiency and drive business growth. Experienced in optimizing big data workflows, implementing cloud-based architectures, and developing intuitive user interfaces. Adept at solving complex technical challenges with a results-driven approach, continuously adapting to emerging technologies to deliver innovative solutions.
+                        <p class="pt-4" style="text-align: justify;">
+						I am a results-driven IT professional with a Master’s in Information Technology, specializing in web development, cloud computing, and data engineering. I thrive on designing secure, scalable, and high-performance applications that transform business operations and accelerate growth. My expertise spans optimizing big data workflows, architecting robust cloud solutions, and creating seamless user experiences. I excel at tackling complex technical challenges with innovative thinking and a relentless commitment to excellence, always staying ahead with the latest technologies to deliver impactful results.
+						</p>
                     </p>
                     
                     <a href="https://www.linkedin.com/in/ajay-shaganti-865256166/" target="_blank" class="btn btn-outline-dark rounded-pill mt-4">
@@ -231,36 +188,51 @@
     <section id="hire">
         <div class="container padding-medium">
             <div class="row flex-row-reverse">
-                <div class="offset-lg-1 col-lg-6" data-aos="fade-left">
+                <div class="offset-lg-1 col-lg-6" data-aos="fade-left" style="padding-left:100px;">
                     <h3 class="display-5 fw-bold">
                         My Skills
                     </h3>
                     <div id="progressbar-tooltip-id" class="progressbar-tooltip pt-4">
-    
-                        <h6>Web Development</h6>
-                        <div class="ab-progress progress-tooltip" data-progress data-tooltip="true" data-value="85"
-                            data-title=""></div>
-                        <h6>Cloud Technologies</h6>
-                        <div class="ab-progress progress-tooltip" data-progress data-tooltip="true" data-value="80"
-                            data-title=""></div>
-                        <h6>Big Data</h6>
-                        <div class="ab-progress progress-tooltip" data-progress data-tooltip="true" data-value="90"
-                            data-title=""></div>
-                        <h6>Problem Solving & Algorithms</h6>
-                        <div class="ab-progress progress-tooltip" data-progress data-tooltip="true" data-value="88"
-                            data-title=""></div>
+						
+						<div class="icon-heading">
+						<i class="fas fa-code fa-2x custom-red"></i>
+						<h5>Frontend Development</h5>
+						</div>
+						<p>HTML, CSS, JavaScript, Figma, React</p>
+						
+                       <div class="icon-heading">
+						<i class="fas fa-server fa-2x mb-2 custom-red"></i>
+						<h5>Backend Development</h5>
+						</div>
+						<p>PHP, Database Management, Hadoop, Hive, Spark</p>
+						<div class="icon-heading">
+						<i class="fas fa-cloud fa-2x mb-2 custom-red"></i>
+						<h5>Cloud Platforms</h5>
+						</div>
+						<p>AWS (VPC, EC2, RDS, S3), Azure, Oracle</p>
+						<div class="icon-heading">
+						<i class="fas fa-laptop-code fa-2x mb-2 custom-red"></i>
+						<h5>Programming Languages</h5>
+						</div>
+						<p>Java, C, Python, Embedded C</p>
+						<div class="icon-heading">
+						<i class="fas fa-tools fa-2x mb-2 custom-red"></i>
+						<h5>Tools & Other Skills</h5>
+						</div>
+						<p>Git, Shell Scripting, Business Process Modeling</p>
                     </div>
                 </div>
-                <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-right">
+                <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-right" >
                     <h3 class="display-5 fw-bold">
                         Why Hire Me ?
                     </h3>
-                    <p class="pt-4" style="text-align: justify;">
-                        With experience in web development, cloud technologies, and big data solutions, I specialize in designing scalable, robust systems that can handle vast datasets. I have a solid understanding of cloud platforms, enabling me to deploy and manage applications efficiently. My background in problem-solving, algorithms, and mentoring students makes me adept at tackling technical challenges and delivering solutions that meet business needs.
-                    </p>
-                    <p style="text-align: justify;">
-                        I have also been actively involved in creating applications for businesses, such as developing booking apps for salons and building a recipe showcase application. My leadership experience as the president of a technical club and my time spent working on optimizing data workflows have further honed my skills in collaboration and cross-functional communication.
-                    </p>
+					<p class="pt-3" style="text-align: justify;">
+						I excel at building secure, scalable web applications, combining technical expertise with a practical, results-driven approach. My strength lies in automating complex workflows—such as inventory and production systems—to improve efficiency and reduce manual effort. I’m also experienced with cloud platforms, using them to ensure performance, security, and accessibility across solutions.
+					</p>
+					<p style="text-align: justify;">
+						What sets me apart is my ability to break down complex technical challenges into clear, actionable solutions. I thrive in collaborative, Agile environments and bring a mentoring mindset that encourages teamwork and knowledge sharing. I’m passionate about learning and innovation, always seeking new ways to apply technology to solve real-world problems and drive continuous improvement.
+					</p>
+
                     <div class="text-start mt-5">
                         <a href="https://www.linkedin.com/in/ajay-shaganti-865256166/" class="btn btn-dark me-4">
                             Hire Me
@@ -276,202 +248,144 @@
     </section>
     
 
-    <section id="offer" class="position-relative padding-medium" data-aos="fade-up">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-5 text-center">
-                    <h3 class="display-5 fw-bold">
-                        What I Offer
-                    </h3>
-                    <p class="mb-5">
-                        I provide a range of services aimed at delivering quality solutions tailored to your business needs. With expertise in web development, big data, cloud technologies, and problem-solving, I aim to help businesses grow through innovation and optimized solutions.
-                    </p>
-                </div>
-            </div>
-    
-            <div class="swiper offer-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Web Development -->
-                    <div class="swiper-slide text-center">
-                        <a href="service-details.html">
-                            <div class="offer-item border mb-4 p-5">
-                                <div class="product-item position-relative">
-                                    <svg class="offer-svg web" width="80" height="80">
-                                        <use xlink:href="#web"></use>
-                                    </svg>
-                                </div>
-                                <h4 class="mt-4">
-                                    Web Development
-                                </h4>
-                                <p>
-                                    I design and develop custom web applications that are scalable, user-friendly, and optimized for performance. From e-commerce to business management tools, I bring your digital presence to life.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-    
-                    <!-- Cloud Technologies -->
-                    <div class="swiper-slide text-center">
-                        <a href="service-details.html">
-                            <div class="offer-item border mb-4 p-5">
-                                <div class="product-item position-relative">
-                                    <svg class="offer-svg cloud" width="80" height="80">
-                                        <use xlink:href="#cloud"></use>
-                                    </svg>
-                                </div>
-                                <h4 class="mt-4">
-                                    Cloud Solutions
-                                </h4>
-                                <p>
-                                    I offer cloud solutions that help businesses scale efficiently. With expertise in AWS and Azure, I can assist with infrastructure setup, migration, and management to ensure seamless operations.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-    
-                    <!-- Big Data Solutions -->
-                    <div class="swiper-slide text-center">
-                        <a href="service-details.html">
-                            <div class="offer-item border mb-4 p-5">
-                                <div class="product-item position-relative">
-                                    <svg class="offer-svg bigdata" width="80" height="80">
-                                        <use xlink:href="#bigdata"></use>
-                                    </svg>
-                                </div>
-                                <h4 class="mt-4">
-                                    Big Data Solutions
-                                </h4>
-                                <p>
-                                    I specialize in building big data solutions with tools like Apache Hive and Apache Spark, enabling businesses to handle vast datasets and derive actionable insights to drive growth.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-    
-                    <!-- Problem Solving & Algorithm Design -->
-                    <div class="swiper-slide text-center">
-                        <a href="service-details.html">
-                            <div class="offer-item border mb-4 p-5">
-                                <div class="product-item position-relative">
-                                    <svg class="offer-svg probs" width="80" height="80">
-                                        <use xlink:href="#probs"></use>
-                                    </svg>
-                                </div>
-                                <h4 class="mt-4">
-                                    Problem Solving & Algorithms
-                                </h4>
-                                <p>
-                                    With a strong background in problem-solving and algorithm design, I can help optimize processes and solve complex challenges, ensuring efficient and reliable solutions for any technical need.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-pagination position-static mt-4 d-lg-none d-block"></div>
-            </div>
-    
-            <!-- Slider Navigation -->
-            <div class="position-absolute top-50 end-0 translate-middle-y me-5 mt-5 pt-5 main-slider-button-next d-lg-block d-none">
-                <svg class="arrow" width="80" height="80">
-                    <use xlink:href="#arrow-right"></use>
-                </svg>
-            </div>
-            <div class="position-absolute top-50 start-0 translate-middle-y ms-5 mt-5 pt-5 main-slider-button-prev d-lg-block d-none">
-                <svg class="arrow" width="80" height="80">
-                    <use xlink:href="#arrow-left"></use>
-                </svg>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- <section id="portfolio" class="padding-medium container-fluid pt-0" data-aos="fade-up">
-        <div class="text-center">
-            <h3 class="display-5 fw-bold">
-                Portfolio
-            </h3>
-            <div class="my-5">
-                <p>
-                    <button class="filter-button px-3 mb-3 active" data-filter="*">
-                        All
-                    </button>
-                    <button class="filter-button px-3 mb-3" data-filter=".branding">
-                        Branding
-                    </button>
-                    <button class="filter-button px-3 mb-3" data-filter=".tshirt">
-                        T-shirt
-                    </button>
-                    <button class="filter-button px-3 mb-3" data-filter=".package">
-                        Package
-                    </button>
-                    <button class="filter-button px-3 mb-3" data-filter=".poster">
-                        Poster
-                    </button>
+    <section id="services" class="position-relative padding-medium bg-light">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-6 text-center">
+                <h3 class="display-5 fw-bold mb-3">Professional Services</h3>
+                <p class="lead text-muted">
+                    Delivering enterprise-grade solutions with a focus on security, scalability, and performance. 
+                    Specialized expertise in web development, cloud architecture, and data engineering.
                 </p>
             </div>
         </div>
-        <div class="isotope-container row">
-            <div class="item tshirt col-md-4 p-3">
-                <div class="project-content position-relative bg-black">
-                    <img class="project-img img-fluid" src="images/portfolio1.jpg" alt="img">
-                    <div class="project-description p-5 position-absolute bottom-0 start-0">
-                        <h4 class="text-white">ultra jot Coffee</h4>
-                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+
+        <!-- Services Grid -->
+        <div class="row g-4">
+            <!-- Web Development -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100 bg-white rounded-3 p-4 position-relative transition-hover">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-code fa-2x text-primary"></i>
+                    </div>
+                    <h4 class="h5 mb-3">Full Stack Development</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Secure Web Applications</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>RESTful APIs</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Database Architecture</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>UI/UX Implementation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cloud Solutions -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100 bg-white rounded-3 p-4 position-relative transition-hover">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-cloud fa-2x custom-red"></i>
+                    </div>
+                    <h4 class="h5 mb-3">Cloud Architecture</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>AWS & Azure Solutions</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Cloud Migration</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Infrastructure as Code</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Cost Optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Data Engineering -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100 bg-white rounded-3 p-4 position-relative transition-hover">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-database fa-2x custom-red"></i>
+                    </div>
+                    <h4 class="h5 mb-3">Data Engineering</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Big Data Processing</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>ETL Pipelines</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Data Warehousing</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Analytics Solutions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Technical Solutions -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card h-100 bg-white rounded-3 p-4 position-relative transition-hover">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-lightbulb fa-2x text-danger"></i>
+                    </div>
+                    <h4 class="h5 mb-3">Technical Solutions</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Process Automation</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>System Integration</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Performance Optimization</li>
+                        <li class="mb-2"><i class="fas fa-check-circle custom-black me-2"></i>Technical Consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="row justify-content-center mt-5 custom-red">
+            <div class="col-md-6 text-center">
+                <a href="#contact" class="btn btn-lg">
+                    <i class="fas fa-paper-plane me-2"></i>Discuss Your Project
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    <section id="portfolio" class="padding-medium container-fluid pt-0" data-aos="fade-up">
+    <div class="text-center">
+        <h3 class="display-5 fw-bold padding-small">
+            Code in Action
+        </h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Project 1: CBI Electric Clone -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="images/cbi-logo.png" class="card-img-top" alt="CBI Electric">
+                    <div class="card-body">
+                        <h5 class="card-title">CBI Electric</h5>
+                        <p class="card-text">A demo of the CBI Electric Stock and production Management Software.</p>
+                        <a href="https://ajaychowdaryshaganti.github.io/CBi-electric/" class="btn btn-dark" target="_blank">View Demo</a>
                     </div>
                 </div>
             </div>
-            <div class="item branding col-md-4 p-3">
-                <div class="project-content position-relative bg-black">
-                    <img class="project-img img-fluid" src="images/portfolio2.jpg" alt="img">
-                    <div class="project-description p-5 position-absolute bottom-0 start-0">
-                        <h4 class="text-white">ultra jot Coffee</h4>
-                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+
+            <!-- Project 2: Srilaxmi Electricals -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="images/laxmi.png" class="card-img-top" alt="Srilaxmi Electricals Website">
+                    <div class="card-body">
+                        <h5 class="card-title">Srilaxmi Electricals & Hardware</h5>
+                        <p class="card-text">Website for Srilaxmi Electricals, a real-world client project.</p>
+                        <a href="https://srilaxmielectricals.com/" class="btn btn-dark" target="_blank">Visit Website</a>
                     </div>
                 </div>
             </div>
-            <div class="item tshirt col-md-4 p-3">
-                <div class="project-content position-relative bg-black">
-                    <img class="project-img img-fluid" src="images/portfolio4.jpg" alt="img">
-                    <div class="project-description p-5 position-absolute bottom-0 start-0">
-                        <h4 class="text-white">ultra jot Coffee</h4>
-                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item branding col-md-4 p-3">
-                <div class="project-content position-relative bg-black">
-                    <img class="project-img img-fluid" src="images/portfolio3.jpg" alt="img">
-                    <div class="project-description p-5 position-absolute bottom-0 start-0">
-                        <h4 class="text-white">ultra jot Coffee</h4>
-                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item package col-md-4 p-3">
-                <div class="project-content position-relative bg-black">
-                    <img class="project-img img-fluid" src="images/portfolio5.jpg" alt="img">
-                    <div class="project-description p-5 position-absolute bottom-0 start-0">
-                        <h4 class="text-white">ultra jot Coffee</h4>
-                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item poster col-md-4 p-3">
-                <div class="project-content position-relative bg-black">
-                    <img class="project-img img-fluid" src="images/portfolio6.jpg" alt="img">
-                    <div class="project-description p-5 position-absolute bottom-0 start-0">
-                        <h4 class="text-white">ultra jot Coffee</h4>
-                        <a href="portfolio-details.html" class="text-white text-decoration-underline">Learn More</a>
+
+            <!-- Project 3: Book It Bro -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="images/bookitbro.png" class="card-img-top" alt="Book It Bro">
+                    <div class="card-body">
+                        <h5 class="card-title">Book It Bro</h5>
+                        <p class="card-text">A demo of booking application used in Indian hospitals (development Phase).</p>
+                        <a href="https://book-it-bro.com/" class="btn btn-dark" target="_blank">Visit Website</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5">
-            <a href="#" class="btn btn-dark me-4">
-                View Portfolios
-            </a>
-        </div>
-    </section> -->
+    </div>
+</section>
 
     <section id="experience" class="bg-light py-5">
         <div class="container" data-aos="fade-up">
@@ -493,7 +407,7 @@
                                 <img src="images/cbi-electric-logo.png" alt="CBI Electric" class="img-fluid">
                             </div> -->
                             <h4 class="fw-bold">Web Application Developer (Freelance)</h4>
-                            <p class="timeline-period">CBI Electric, Melbourne | 2023 – 2024</p>
+                            <p class="timeline-period">CBI Electric, Melbourne | 2023 – 2025</p>
                             <div class="skills-container">
                                 <span class="skill-badge">HTML/CSS</span>
                                 <span class="skill-badge">JavaScript</span>
