@@ -40,8 +40,8 @@ This is main CSS file that contains custom style rules used in this template
 
 /* Fonts */
 :root {
-  --heading-font: 'Raleway', sans-serif;
-  --body-font: 'Lato', sans-serif;
+  --heading-font: 'Poppins', sans-serif;
+  --body-font: 'Poppins', sans-serif;
 }
 
 
@@ -65,9 +65,61 @@ html {
 body {
   font-family: var(--body-font);
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.688rem;
+  font-size: 1rem;
+  line-height: 1.8;
   color: var(--light-text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+h3,
+.h3 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-size: 1.5rem;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 h1,
@@ -83,9 +135,8 @@ h5,
 h6,
 .h6 {
   font-family: var(--heading-font);
-  font-weight: 600;
   color: var(--dark-color);
-  text-transform: capitalize;
+  margin-top: 0;
 }
 
 a {
@@ -123,8 +174,18 @@ a:hover {
 --------------------------------------------------------------*/
 
 .margin-small {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--body-text-color);
+}
+
+article p,
+.text-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
 }
 
 .margin-medium {
@@ -143,11 +204,13 @@ a:hover {
 .btn {
   --bs-btn-padding-x: 2rem;
   --bs-btn-padding-y: 1rem;
-  --bs-btn-font-size: 1rem;
-  --bs-btn-font-weight: 400;
-  border-radius: 0;
+  --bs-btn-font-size: 0.9rem;
+  --bs-btn-font-weight: 500;
+  border-radius: 4px;
   text-transform: uppercase;
-  transition: all 0.5s ease-in-out;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease-in-out;
+  font-family: var(--heading-font);
 }
 
 
@@ -814,17 +877,20 @@ a.blog-link:hover {
     }
     
     /* Job title */
-    .timeline-card h4 {
-        margin-bottom: 10px;
+        .timeline-card h4 {
+        margin-bottom: 0.5rem;
         color: #e63946;
+        font-size: 1.25rem;
+        font-weight: 600;
     }
     
     /* Time period */
     .timeline-period {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         font-weight: 500;
-        margin-bottom: 15px;
-        color: #555;
+        margin-bottom: 1rem;
+        color: #666;
+        display: block;
     }
     
     /* Skills container */
@@ -836,12 +902,20 @@ a.blog-link:hover {
     }
     
     .skill-badge {
-        background-color: #f0f7ff;
+        background-color: #f8f9fa;
         color: #e63946;
         font-size: 0.8rem;
-        padding: 4px 10px;
-        border-radius: 15px;
-        border: 1px solid #cce5ff;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border: 1px solid #e9ecef;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+    
+    .skill-badge:hover {
+        background-color: #e63946;
+        color: white;
+        transform: translateY(-1px);
     }
     
     /* Key Achievements */
@@ -864,7 +938,9 @@ a.blog-link:hover {
     }
     
     .achievement-text {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #444;
     }
     
     /* Arrows for cards */
