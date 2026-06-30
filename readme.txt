@@ -1,1 +1,0 @@
-This portfolio is built using a template downloaded from templatesjungle.com for free
