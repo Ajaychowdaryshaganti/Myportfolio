@@ -67,7 +67,7 @@ export default function Hero() {
             <div className="grid grid-cols-3 gap-4">
               {[
                 { value: "5+", label: "Years Experience" },
-                { value: "3", label: "Live Apps Shipped" },
+                { value: "8+", label: "Products Shipped (Web & Mobile)" },
                 { value: "2", label: "Current Roles" },
               ].map((stat) => (
                 <div

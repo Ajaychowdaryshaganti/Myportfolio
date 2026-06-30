@@ -145,6 +145,14 @@ export const projects = [
     emoji: "📅",
     link: "https://book-it-bro.com/",
   },
+  {
+    title: "The Hangout World",
+    description: "Premium milkshakes & waffles café website for Kukatpally's Hangout — a real client project featuring a signature collection menu, franchise inquiry, and online ordering.",
+    tags: ["HTML", "CSS", "JavaScript", "Client Project"],
+    image: "/images/hangout logo.jpg",
+    emoji: "🌐",
+    link: "https://thehangoutworld.com/",
+  },
 ];
 
 export const experience = [
